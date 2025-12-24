@@ -22,7 +22,7 @@ public class AuthService {
     public Role authenticate() {
         System.out.print("Введите логин (user/root): ");
         String login = scanner.nextLine().trim();
-        System.out.print("Введите пароль: ");
+        System.out.print("Введите пароль (default: user123/root123): ");
         String password = scanner.nextLine().trim();
 
         UserInfo userInfo = users.get(login);

@@ -10,7 +10,11 @@ public class RootMenuStrategy implements MenuStrategy {
 
     private final EquipmentConfigService configService = new EquipmentConfigService();
     private final EquipmentStatsService statsService = new EquipmentStatsService();
-    private final AuthService authService = new AuthService(new Scanner(System.in));
+    private final AuthService authService;
+
+    public RootMenuStrategy(AuthService authService) {
+        this.authService = authService;
+    }
 
     @Override
     public void showMenu(Scanner scanner) {
